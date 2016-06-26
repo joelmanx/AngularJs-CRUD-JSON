@@ -7,16 +7,16 @@ class TodolistComponent {
     this.message_reves=$filter('reves')(this.message);
 
     this.alltodos=[
-    	{text:'LEARn es6',done:false},
-    	{text:'learn GIThub',done:false},
-    	{text:'LEARN npm',done:true},
-    	{text:'learn node',done:false},
-    	{text:'LEARN ANGULAR',done:false},
-    	{text:'leARN less',done:false},
-    	{text:'lEaRN css',done:false},
-    	{text:'learn BootStrap',done:false},
-    	{text:'learn HTML5',done:false},
-    	{text:'learn BOWER',done:false}
+    	{id:'1',text:'LEARn es6',done:false},
+    	{id:'2',text:'learn GIThub',done:false},
+    	{id:'3',text:'LEARN npm',done:true},
+    	{id:'4',text:'learn node',done:false},
+    	{id:'5',text:'LEARN ANGULAR',done:false},
+    	{id:'6',text:'leARN less',done:false},
+    	{id:'7',text:'lEaRN css',done:false},
+    	{id:'8',text:'learn BootStrap',done:false},
+    	{id:'9',text:'learn HTML5',done:false},
+    	{id:'10',text:'learn BOWER',done:false}
     ];
   }
 }

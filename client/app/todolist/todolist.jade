@@ -6,6 +6,7 @@
 			label
 				input(type="checkbox" ng-model="itemtodo.done")
 				span {{itemtodo.text | uppercase | reves }}
+			button.btn.btn-small.btn-warning(ui-sref="todoDetail({idItem:itemtodo.id})") Detail	
 .well: search-bar 
 
 p {{vm.message}}
