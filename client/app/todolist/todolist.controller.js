@@ -2,8 +2,11 @@
 (function(){
 
 class TodolistComponent {
-  constructor() {
-    this.message = 'Hello';
+  constructor($filter) {
+    
+    this.message = 'Hello Everybody';
+    this.message_reves=$filter('reves')(this.message);
+
     this.alltodos=[
     	{text:'LEARn es6',done:false},
     	{text:'learn GIThub',done:false},

@@ -8,9 +8,13 @@
 				| Your search is 
 				strong {{mysearch}}
 
+
+
 .todos.center-block
 	ul
 		li.todoitem(ng-repeat='itemtodo in vm.alltodos')
 			label
 				input(type="checkbox" ng-model="itemtodo.done")
-				span {{itemtodo.text | uppercase}}
+				span {{itemtodo.text | uppercase | reves }}
+p {{vm.message}}
+p {{vm.message_reves}}				

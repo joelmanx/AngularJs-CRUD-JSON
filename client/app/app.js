@@ -5,7 +5,8 @@ angular.module('todoProjectApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ui.router'
+  'ui.router',
+  'todoProjectApp.reves'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
