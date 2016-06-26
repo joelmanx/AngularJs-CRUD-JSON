@@ -6,7 +6,8 @@ angular.module('todoProjectApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'todoProjectApp.reves'
+  'todoProjectApp.reves',
+  'todoProjectApp.searchBar'  
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

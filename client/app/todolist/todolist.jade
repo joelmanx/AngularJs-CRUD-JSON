@@ -1,14 +1,4 @@
-.well
-	form.form-horizontal
-		.form-group
-			label.col-md-2.control-label Search
-			.col-md-6
-				input.form-control(ng-model="mysearch" placeholder="Enter your Search" type="text")
-			p.col-md-4
-				| Your search is 
-				strong {{mysearch}}
-
-
+.well: search-bar 
 
 .todos.center-block
 	ul
@@ -16,5 +6,7 @@
 			label
 				input(type="checkbox" ng-model="itemtodo.done")
 				span {{itemtodo.text | uppercase | reves }}
+.well: search-bar 
+				
 p {{vm.message}}
 p {{vm.message_reves}}				
