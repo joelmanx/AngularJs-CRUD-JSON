@@ -2,9 +2,9 @@ form.form-horizontal
 	.form-group
 		label.col-md-2.control-label Search
 		.col-md-6
-			input.form-control(ng-model="mysearch" placeholder="Enter your Search" type="search")
+			input.form-control(ng-model="mysearch.text" placeholder="Enter your Search" type="search")
 		.col-md-4
 			button.btn.btn-warning(ng-click='clearField()') Clear
 		p.col-md-12.text-center
 			span#labelMessage {{serchingMessage}}
-			strong {{mysearch}} 
+			strong {{mysearch.text}} 

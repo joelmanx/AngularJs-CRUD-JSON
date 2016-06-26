@@ -1,12 +1,12 @@
-.well: search-bar 
+.well: search-bar
 
 .todos.center-block
 	ul
-		li.todoitem(ng-repeat='itemtodo in vm.alltodos')
+		li.todoitem(ng-repeat='itemtodo in vm.alltodos | filter:mysearch ')
 			label
 				input(type="checkbox" ng-model="itemtodo.done")
 				span {{itemtodo.text | uppercase | reves }}
 .well: search-bar 
-				
+
 p {{vm.message}}
 p {{vm.message_reves}}				

@@ -3,7 +3,6 @@
 
 class TodolistComponent {
   constructor($filter) {
-    
     this.message = 'Hello Everybody';
     this.message_reves=$filter('reves')(this.message);
 
@@ -15,7 +14,9 @@ class TodolistComponent {
     	{text:'LEARN ANGULAR',done:false},
     	{text:'leARN less',done:false},
     	{text:'lEaRN css',done:false},
-    	{text:'learn BootStrap',done:false}
+    	{text:'learn BootStrap',done:false},
+    	{text:'learn HTML5',done:false},
+    	{text:'learn BOWER',done:false}
     ];
   }
 }

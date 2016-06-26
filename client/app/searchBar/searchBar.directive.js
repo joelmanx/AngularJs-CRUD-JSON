@@ -10,11 +10,13 @@ angular.module('todoProjectApp.searchBar',[])
       	let theinput=element.find('input');
       	let theButton=element.find('.btn-warning');
 
-      	scope.mysearch='';
+      	scope.mysearch={text:'gith'};
       	scope.serchingMessage='Your Search is :';
       	scope.clearField=function(){
-      		scope.mysearch='';      		
+      		scope.mysearch={text:''} 		
       	};
+
+
 
       	// yo can add event listeners and modify the dom with jqLite
       	theButton.on('mouseenter',()=>{
