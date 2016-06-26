@@ -3,17 +3,9 @@
 (function() {
 
 class MainController {
-
-  constructor($http) {
-    this.$http = $http;
-    this.awesomeThings = ['sas','fasdf','gfgf'];
+  constructor() {
+      this.awesomeThings = ['sas','fasdf','gfgf'];
   }
-
-  /*$onInit() {
-    this.$http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-    });
-  }*/
 }
 
 angular.module('todoProjectApp')
