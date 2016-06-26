@@ -10,13 +10,5 @@
 
 .todos.center-block
 	ul
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
-		li This is the todolist view
+		li(ng-repeat='itemtodo in vm.alltodos')
+			span {{itemtodo.text}}
