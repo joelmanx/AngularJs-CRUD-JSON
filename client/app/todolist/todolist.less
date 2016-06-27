@@ -8,6 +8,7 @@
 	padding: 5px;
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
+	transition:height .3s ease-in;
 	ul{
 		margin: 0;
 		padding: 0;
@@ -23,12 +24,18 @@
 }
 
 .todoitem{
-	transition: all 0.3s ease-out; 
 	overflow: hidden;
 	&:hover{
 	//	transform: scale(1.1); 
 		background: #6095bf;
 	//	box-shadow: 0 2px 2px #000;
+	}
+	&.doneStyle{
+		background: #ffffff;
+    	color: #86b7e6;
+		label{
+			text-decoration: line-through;
+		}
 	}
 	label{
 		padding: 6px;
@@ -53,4 +60,27 @@
 .justforFun{
 	background: yellow;
 	border: 2px dotted orange;
+}
+
+
+// Classes that works with ngAnimate
+
+.todoitem{
+	position: relative;
+	transition:all 0.5s ease-out; 	
+	&.ng-enter{
+		opacity: 0;
+		left: 200px;
+	}
+	&.ng-enter-active{
+		left: 0;
+		opacity: 1;	
+	}
+	&.ng-leave{
+		opacity: 1;
+	}
+	&.ng-leave-active{
+		left: 200px;
+		opacity: 0;	
+	}
 }

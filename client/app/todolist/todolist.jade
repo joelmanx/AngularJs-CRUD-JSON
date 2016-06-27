@@ -2,7 +2,7 @@
 
 .todos.center-block
 	ul
-		li.todoitem(ng-repeat='itemtodo in vm.alltodos | filter:mysearch ')
+		li.todoitem(ng-class="{doneStyle:itemtodo.done}" ng-repeat='itemtodo in vm.alltodos | filter:mysearch')
 			label
 				input(type="checkbox" ng-model="itemtodo.done")
 				span {{itemtodo.text | uppercase | reves }}

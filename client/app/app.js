@@ -6,6 +6,7 @@ angular.module('todoProjectApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
+  'ngAnimate',
   'todoProjectApp.reves',
   'todoProjectApp.searchBar'  
 ])
