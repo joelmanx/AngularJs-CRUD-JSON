@@ -2,19 +2,20 @@
 (function(){
 
 class TodolistComponent {
-  constructor($filter,$http) {
+  constructor($filter,todoListService) {
     this.message = 'Hello Everybody';
     this.message_reves=$filter('reves')(this.message);
     this.alltodos=[];
-    $http.get('app/data/todos.json')
-    .then(response=>{
+
+    todoListService.getAllTodos()
+    .then(response=>{    
     	this.alltodos=response.data;
     })
     .catch(e=>console.log(e));   
   }
 }
 
-TodolistComponent.$inject=['$filter','$http'];
+TodolistComponent.$inject=['$filter','todoListService'];
 
 angular.module('todoProjectApp')
   .component('todolist', {

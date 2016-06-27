@@ -2,28 +2,23 @@
 (function(){
 
 class TodoDetailComponent {
-  constructor($stateParams,$http) {
+  constructor($stateParams,todoListService) {
 
   	this.detailTodos=[];
     this.detail="Detail Empty";
 
     let idItem=$stateParams.idItem;
 
-    $http.get('app/data/detailTodos.json?id='+idItem)
+    todoListService.getDetailTodo(idItem)   
     .then(response=>{
-    	this.detailTodos=response.data;
-	  	if(idItem){
-	  		let todoId=$stateParams.idItem;
-	  		let res=this.detailTodos.find(el=>(el.id===todoId));
-	  		if(res)
-	  			this.detail=res.detail;
-	  	} 
-    })
+          if(response!==null) { this.detail=response.detail; }      
+    	} 
+    )
     .catch(e=>console.log(e));  
   }
 }
 
-TodoDetailComponent.$inject=['$stateParams','$http'];
+TodoDetailComponent.$inject=['$stateParams','todoListService'];
 
 angular.module('todoProjectApp')
   .component('todoDetail', {

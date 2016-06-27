@@ -8,7 +8,8 @@ angular.module('todoProjectApp', [
   'ui.router',
   'ngAnimate',
   'todoProjectApp.reves',
-  'todoProjectApp.searchBar'  
+  'todoProjectApp.searchBar',
+  'todoProjectApp.todoListService'  
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
