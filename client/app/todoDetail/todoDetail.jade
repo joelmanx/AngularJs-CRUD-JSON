@@ -1,4 +1,14 @@
 .panel.panel-primary
-	.panel-heading This is the detail of the item todo
+	.panel-heading
+		label
+			h2(ng-bind-html="td.titleWindow")
 	.panel-body
-		h3 {{$ctrl.detail}}
+		.form-group
+			label.form-control TITLE
+			textarea.form-control(ng-model="td.title")
+		.form-group
+			label.form-control DETAIL OF POST
+			textarea.form-control(ng-model="td.body")
+		.form-group
+			button.btn.btn-success(ng-show="td.idItem>0" ng-click="td.updatePost()") Update Post
+			button.btn.btn-success(ng-show="td.idItem==0" ng-click="td.addPost()") Add Post

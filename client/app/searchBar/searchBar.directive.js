@@ -9,7 +9,7 @@ angular.module('todoProjectApp.searchBar',[])
 
       	let theinput=element.find('input');
       	let theButton=element.find('.btn-warning');
-
+				scope.query="$";
       	scope.mysearch={text:''};
       	scope.serchingMessage='Your Search is :';
       	scope.clearField=function(){

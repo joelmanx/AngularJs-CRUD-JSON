@@ -9,6 +9,10 @@ class NavbarController {
     {
       'title':'TodoList',
       'state':'todolist'
+    },
+    {
+      'title':'Usuarios',
+      'state':'userlist'
     }
   ];
 

@@ -5,6 +5,13 @@ form.form-horizontal
 			input.form-control(ng-model="mysearch.text" placeholder="Enter your Search" type="search")
 		.col-md-4
 			button.btn.btn-warning(ng-click='clearField()') Clear
+	.form-group
+		label.col-md-2.control-label Search by:
+		.col-md-6			
+			select.form-control(ng-model="query")
+				option(value="$") All fields
+				option(value="title") Title field
+				option(ng-selected value="body") Body field
 		p.col-md-12.text-center
 			span#labelMessage {{serchingMessage}}
 			strong {{mysearch.text}} 

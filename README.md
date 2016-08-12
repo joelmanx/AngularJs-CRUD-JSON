@@ -1,3 +1,6 @@
+# AngularJs-CRUD-JSON
+AngularJs CRUD JSON, file JSON and services consumption, and localStorage save
+
 # todo-project
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.4.2.

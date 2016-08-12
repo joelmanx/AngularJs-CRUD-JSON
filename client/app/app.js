@@ -2,6 +2,7 @@
 
 angular.module('todoProjectApp', [
   'todoProjectApp.constants',
+  'ui.bootstrap',
   'ngCookies',
   'ngResource',
   'ngSanitize',

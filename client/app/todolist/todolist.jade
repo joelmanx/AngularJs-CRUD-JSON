@@ -1,13 +1,23 @@
 .well: search-bar
 
 .todos.center-block
+	//div {{vm.alltodos}}
+	button(ui-sref='todoDetail({ id:0 })' class="btn btn-success") Add new Post
 	ul
-		li.todoitem(ng-class="{doneStyle:itemtodo.done}" ng-repeat='itemtodo in vm.alltodos | filter:mysearch')
+		li.todoitem(ng-class="{doneStyle:itemtodo.completed}" ng-repeat='itemtodo in vm.alltodos.slice(((vm.currentPage-1)*vm.itemsPerPage), ((vm.currentPage)*vm.itemsPerPage)) | filter:mysearch.text')
 			label
-				input(type="checkbox" ng-model="itemtodo.done")
-				span {{itemtodo.text | uppercase | reves }}
-			button.btn.btn-small.btn-warning(ui-sref="todoDetail({idItem:itemtodo.id})") Detail	
-.well: search-bar 
+				input(type="checkbox", value="{{itemtodo.completed}}")
+				span {{itemtodo.title | uppercase }}
+				br			
+				span -{{itemtodo.body | lowercase }}
+				button(ui-sref='todoDetail({ id:itemtodo.idPost })' class="btn btn-success") View/Update
+				button(ng-click='vm.deletePost(itemtodo.idPost)' class="btn btn-warning") Delete
+	ul(uib-pagination total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.currentPage" ng-change="vm.pageChanged()")
 
+p
+	span total Items: {{vm.totalItems}}
+	span Items per page: {{vm.itemsPerPage}}
+	span Current Page: {{vm.currentPage}}
+.well: search-bar
 p {{vm.message}}
-p {{vm.message_reves}}				
+//p {{vm.message_reves}}				
